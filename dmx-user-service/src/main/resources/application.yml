@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: dmx-user-service
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    platform: mysql
+    url: jdbc:mysql://localhost:3306/xuanhuang
+    username: root
+    password: 123456
+server:
+  port: 9005
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+
+
+
+
+
+

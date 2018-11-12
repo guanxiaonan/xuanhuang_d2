@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: dmx-produce-task-service
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    platform: mysql
+    url: jdbc:mysql://localhost:3306/dmx?useSSL=false
+    username: root
+    password: root
+  mail:
+    host: smtp.163.com
+    username: 15924162290@163.com
+    password: 123qwer
+    default-encoding: utf-8
+    port: 465
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+server:
+  port: 9007
+eureka:
+  client:
+    service-url:
+      defaultZone: http://139.129.4.10:9000/eureka/
+
+
+
+
+
+
+

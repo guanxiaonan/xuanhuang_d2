@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: dmx-inventory-service
+  cloud:
+    config:
+      uri: http://139.129.4.10:9001/
+      label: master
+      profile: dev

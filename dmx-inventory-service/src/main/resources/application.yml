@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: dmx-inventory-service
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    platform: mysql
+    url: jdbc:mysql://localhost:3306/dmx?useSSL=false
+    username: root
+    password: root
+
+server:
+  port: 9006
+eureka:
+  client:
+    service-url:
+      defaultZone: http://139.129.4.10:9000/eureka/
+
+
+
+
+
+

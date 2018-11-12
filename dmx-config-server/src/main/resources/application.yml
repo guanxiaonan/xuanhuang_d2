@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/_matthew/config_server.git
+          username: _matthew
+          password: 789456qwer
+# profiles:
+#   active: native
+server:
+  port: 9001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://139.129.4.10:9000/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 50     #客户端每隔多少秒发送心跳给服务器端,表明客户端还活着
+    lease-expiration-duration-in-seconds: 30  #eureka-server在该时间内没有收到服务的心跳,就会判定该服务失效
+# /info 显示对应信息
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+#security:
+#  user:
+#    name: config
+#    password: 123456
+
+
+
+

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: dmx-material-service
+   # 配置中心
+  cloud:
+    config:
+      uri: http://139.129.4.10:9001/
+      label: master
+      profile: dev

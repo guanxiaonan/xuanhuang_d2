@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: dmx-one-service
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    platform: mysql
+    url: jdbc:mysql://localhost:3306/xuanhuang
+    username: root
+    password: 123456
+server:
+  port: 9002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+##设置 hystrix的超时为5s,防止feign初次调用失败 不知为啥没用
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 15000
+
+# 禁用 hystrix 超时
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        timeout:
+#          enabled: false
+#zuul:
+#  routes:
+#    material-service:
+#      path: /one-material-service/**
+#      service-id: material-service
+#    # routes to url
+#    material-service-url:
+#      path: /material-service/**
+#      url: http://localhost:9004/
+
+
+
+
+
