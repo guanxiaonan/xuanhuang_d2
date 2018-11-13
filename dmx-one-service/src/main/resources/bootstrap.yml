@@ -3,6 +3,6 @@ spring:
     name: dmx-one-service
   cloud:
     config:
-      uri: http://139.129.4.10:9001/
+      uri: http://localhost:9001/
       label: master
       profile: dev
